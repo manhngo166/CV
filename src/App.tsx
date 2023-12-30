@@ -6,10 +6,13 @@ import Skill from './sections/Skill'
 import Education from './sections/Education';
 import Project from './sections/Project';
 import { MAIN_COLOR } from './cssGlobal';
+import Information from './sections/Information';
 
 const Wrap = styled.div`
-  padding: 6.4rem;
-  color: ${MAIN_COLOR}
+  padding: 6.4rem 0 ;
+  color: ${MAIN_COLOR};
+  max-width: 67.2rem;
+  margin: 0 auto;
 `;
 
 function App() {
@@ -17,7 +20,7 @@ function App() {
     <div className='container'>
       <Wrap>
       <Section title="Ngô Quang Mạnh">
-          <About />
+          <Information />
       </Section>
       <Section title="Thông tin">
           <About />

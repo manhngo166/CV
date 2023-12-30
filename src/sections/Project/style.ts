@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FONT_MENLO } from "../../cssGlobal";
+import { FONT_MENLO, SECOND_COLOR } from "../../cssGlobal";
 
 export const Project = styled.ul`
     display: flex;
@@ -26,7 +26,7 @@ export const ProjectTitle = styled.div`
 export const ProjectContent = styled.div`
     margin-bottom: 1.2rem;
     font-family: ${FONT_MENLO};
-    color: #6B7280;
+    color: ${SECOND_COLOR};
     font-size: 1.2rem;
     line-height: 1.6rem;
 `;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FONT_MENLO } from "../../cssGlobal";
+import { FONT_MENLO, SECOND_COLOR } from "../../cssGlobal";
 
 export const Education = styled.div`
 
@@ -23,12 +23,12 @@ export const EducationTitle = styled.div`
 `;
 
 export const EducationTimeRange = styled.div`
-    
+    color: ${SECOND_COLOR};
 `;
 
 export const EducationContent = styled.div`
     font-family: ${FONT_MENLO};
-    color: #6B7280;
+    color: ${SECOND_COLOR};
     font-size: 1.2rem;
     line-height: 1.6rem;
 `;

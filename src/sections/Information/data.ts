@@ -1,7 +1,23 @@
+import image from 'assets/images/avatar2.jpg';
+
 const data = {
+    position: 'Pre-Senior Frontend Developer',
     description: 'Tôi là một người trẻ, nhiệt tình, cởi mở và có trách nhiệm',
-    address: 'Đông Anh, Hà Nội, Việt Nam',
-    image: 'src/assets/images/avatar2.jpg',
+    options: [
+        {
+            icon: `
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-globe h-3 w-3"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            `,
+            text: 'Đông Anh, Hà Nội, Việt Nam',
+        },
+        {
+            icon: `
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.118 14.702L14 15.5c-2.782-1.396-4.5-3-5.5-5.5l.77-4.13L7.815 2H4.064c-1.128 0-2.016.932-1.847 2.047c.42 2.783 1.66 7.83 5.283 11.453c3.805 3.805 9.286 5.456 12.302 6.113c1.165.253 2.198-.655 2.198-1.848v-3.584z"/></svg>
+            `,
+            text: '0867752667'
+        },
+    ],
+    image: image,
     contacts: [
         {
             title: 'Email',

@@ -1,51 +1,46 @@
 import data from "./data";
-import {
-    Information as InformationWrap,
-    InformationDescription, InformationAddress,
-    InformationContacts,
-    InformationContact,
-    InformationContactLink,
-    InformationAddressText,
-    InformationAddressIcon,
-    InformationAvatar,
-    InformationLeft,
-    InformationRight
-} from "./style";
+import InformationStyled from "./style";
 
 const Information = () => {
-    const renderContacts = data.contacts.map(contact => <ContactItem {...contact} />);
+    const renderContacts = data.contacts.map((contact, index) => {
+        const { title, link, icon } = contact;
+    
+        return (
+            <InformationStyled.Contact key={index}>
+                <InformationStyled.ContactLink
+                    href={link}
+                    target="_blank"
+                    title={title}
+                    dangerouslySetInnerHTML={{__html: icon}}
+                />
+            </InformationStyled.Contact>
+        )
+    });
+
+    const renderOptions = data.options.map((option, index) => {
+        const { icon, text } = option;
+
+        return (
+            <InformationStyled.Option key={index}>
+                <InformationStyled.OptionIcon dangerouslySetInnerHTML={{__html: icon}} />
+                <InformationStyled.OptionText>{text}</InformationStyled.OptionText>
+            </InformationStyled.Option>
+        )
+    })
 
     return (
-        <InformationWrap>
-            <InformationLeft>
-                <InformationDescription>{data.description}</InformationDescription>
-                    <InformationAddress>
-                        <InformationAddressIcon>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-globe h-3 w-3"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-                        </InformationAddressIcon>
-                        <InformationAddressText>{data.address}</InformationAddressText>
-                    </InformationAddress>
-                <InformationContacts>{renderContacts}</InformationContacts>
-            </InformationLeft>
-            <InformationRight>
-                <InformationAvatar src={data.image} />
-            </InformationRight>
-        </InformationWrap>
+        <InformationStyled.Wrap>
+            <InformationStyled.Left>
+                <InformationStyled.Position>{data.position}</InformationStyled.Position>
+                <InformationStyled.Description>{data.description}</InformationStyled.Description>
+                <InformationStyled.Options>{renderOptions}</InformationStyled.Options>
+                <InformationStyled.Contacts>{renderContacts}</InformationStyled.Contacts>
+            </InformationStyled.Left>
+            <InformationStyled.Right>
+                <InformationStyled.Avatar src={data.image} />
+            </InformationStyled.Right>
+        </InformationStyled.Wrap>
     )
 };
-
-const ContactItem = ({ icon, link, title }: any) => {
-    return (
-        <InformationContact>
-            <InformationContactLink
-                href={link}
-                target="_blank"
-                title={title}
-                dangerouslySetInnerHTML={{__html: icon}}
-            />
-        </InformationContact>
-    )
-};
-
 
 export default Information;

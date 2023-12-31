@@ -1,4 +1,11 @@
-const SIZES = {
+export const CSS_VARIABLE = {
+    fontMenlo: 'Menlo',
+    mainColor: 'rgb(3, 7, 18)',
+    secondColor: 'rgb(107, 114, 128)',
+    thirdColor: 'rgb(243, 244, 246)'
+};
+
+export const SIZES = {
     mobileS: '320px',
     mobileM: '375px',
     mobileL: '425px',
@@ -8,7 +15,7 @@ const SIZES = {
     desktop: '2560px'
 }
 
-const DEVICES = {
+export const DEVICES = {
     mobileS: `(max-width: ${SIZES.mobileS})`,
     mobileM: `(max-width: ${SIZES.mobileM})`,
     mobileL: `(max-width: ${SIZES.mobileL})`,
@@ -18,5 +25,3 @@ const DEVICES = {
     desktop: `(max-width: ${SIZES.desktop})`,
     desktopL: `(max-width: ${SIZES.desktop})`
 };
-
-export default DEVICES;

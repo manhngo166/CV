@@ -1,8 +1,12 @@
 import styled from "styled-components";
-import { FONT_MENLO, SECOND_COLOR } from "../../cssGlobal";
+import { CSS_VARIABLE } from "@/constants";
 
-export const About = styled.div`
-    font-family: ${FONT_MENLO};
-    color: ${SECOND_COLOR};
-    line-height: 2rem;
-`;
+const AboutStyled = {
+    Wrap: styled.div`
+        font-family: ${CSS_VARIABLE.fontMenlo};
+        color: ${CSS_VARIABLE.secondColor};
+        line-height: 2rem;
+    `
+};
+
+export default AboutStyled;

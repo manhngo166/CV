@@ -1,12 +1,12 @@
 const data = [
     {
         title: 'IOT platform',
-        content: 'A platform to build and grow your online business',
+        content: 'Dự án sử dụng các cảm biến để thông báo đến user về thông tin các thiết bị cần theo dõi',
         skills: ['ReactJS', 'Vite', 'Rollup', 'Typescript', 'HTML', 'CSS', 'Antd', 'styled-components', 'primereact', 'MOBX', 'OIDC', 'SCSS']
     },
     {
         title: 'NFT Marketplace',
-        content: 'Content content content',
+        content: 'Dự án triển khai NFT Block chain',
         skills: ['NextJs', 'Blockchain', 'Redux', 'styled-components', 'SCSS', 'REDUX']
     },
     {

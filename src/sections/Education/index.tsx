@@ -1,36 +1,21 @@
 import data from './data';
-import {
-    Education as EducationWrap,
-    EducationItem as EducationItemWrap,
-    EducationTitle,
-    EducationTimeRange,
-    EducationContent,
-    EducationHeader,
-} from './style';
+import EducationStyled from './style';
 
 const Education = () => {
-    const renderData = data.map(({ title, timeRange, content }) => {
-        return <EducationItem title={title} timeRange={timeRange}>{content}</EducationItem>
+    const renderData = data.map((item, index) => {
+        const { title, timeRange, content } = item;
+
+        return (
+            <EducationStyled.Item key={index}>
+                <EducationStyled.Header>
+                    <EducationStyled.Title>{title}</EducationStyled.Title>
+                    <EducationStyled.TimeRange>{timeRange}</EducationStyled.TimeRange>
+                </EducationStyled.Header>
+                <EducationStyled.Content>{content}</EducationStyled.Content>
+            </EducationStyled.Item>
+        )
     })
-    return <EducationWrap>{renderData}</EducationWrap>
+
+    return <EducationStyled.Wrap>{renderData}</EducationStyled.Wrap>
 };
-
-interface EducationItemProps {
-    title: string;
-    timeRange: string;
-    children: any;
-}
-const EducationItem = (props: EducationItemProps) => {
-    const { title, timeRange, children } = props;
-    return (
-        <EducationItemWrap>
-            <EducationHeader>
-                <EducationTitle>{title}</EducationTitle>
-                <EducationTimeRange>{timeRange}</EducationTimeRange>
-            </EducationHeader>
-            <EducationContent>{children}</EducationContent>
-        </EducationItemWrap>
-    );
-}
-
 export default Education;

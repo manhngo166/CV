@@ -1,11 +1,11 @@
 import data from "./data";
-import { About as AboutWrap } from "./style";
+import AboutStyled from "./style";
 
 const About = () => {
     return (
-        <AboutWrap>
+        <AboutStyled.Wrap>
             {data}
-        </AboutWrap>
+        </AboutStyled.Wrap>
     )
 }
 

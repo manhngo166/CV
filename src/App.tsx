@@ -1,17 +1,15 @@
 import styled from 'styled-components';
-import Section from './components/section'
-import About from './sections/About'
-import Experience from './sections/Experience';
-import Skill from './sections/Skill'
-import Education from './sections/Education';
-import Project from './sections/Project';
-import { MAIN_COLOR } from './cssGlobal';
-import Information from './sections/Information';
-import DEVICES from './constants/devices';
+import Section from 'components/section'
+import About from 'sections/About'
+import Experience from 'sections/Experience';
+import Skill from 'sections/Skill'
+import Education from 'sections/Education';
+import Information from 'sections/Information';
+import { DEVICES, CSS_VARIABLE } from '@/constants';
 
 const Wrap = styled.div`
   padding: 6.4rem 0;
-  color: ${MAIN_COLOR};
+  color: ${CSS_VARIABLE.mainColor};
   max-width: 67.2rem;
   margin: 0 auto;
 
@@ -30,17 +28,14 @@ function App() {
       <Section title="Thông tin">
           <About />
       </Section>
-      <Section title="Kinh nghiệm">
-          <Experience />
-      </Section>
       <Section title="Học vấn">
           <Education />
       </Section>
       <Section title="Kỹ năng">
           <Skill />
       </Section>
-      <Section title="Dự án">
-          <Project />
+      <Section title="Kinh nghiệm">
+          <Experience />
       </Section>
       </Wrap>
     </div>

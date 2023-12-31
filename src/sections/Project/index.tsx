@@ -1,29 +1,21 @@
-import { Project as ProjectWrap, ProjectItem as ProjectItemWrap, ProjectTitle, ProjectContent, ProjectSkills, ProjectSkill } from "./style";
+import ProjectStyled from './style';
 import data from "./data";
 
 const Project = () => {
     const renderData = data.map((project: any) => {
-        return <ProjectItem {...project} />
+        const { title, content, skills} = project;
+        const renderSkills = skills.map((skill: any, index: number) =>  <ProjectStyled.Skill key={index}>{skill}</ProjectStyled.Skill>);
+
+        return (
+            <ProjectStyled.Item>
+                <ProjectStyled.Title>{title}</ProjectStyled.Title>
+                <ProjectStyled.Content>{content}</ProjectStyled.Content>
+                <ProjectStyled.Skills>{renderSkills}</ProjectStyled.Skills>
+            </ProjectStyled.Item>
+    )
     })
 
-    return <ProjectWrap>{renderData}</ProjectWrap>
-};
-
-interface ProjectItemProps {
-    title: string;
-    content: string;
-    skills: string[]
-}
-const ProjectItem = ({ title, content, skills}: ProjectItemProps) => {
-    const renderSkills = skills.map(skill =>  <ProjectSkill>{skill}</ProjectSkill>);
-
-    return (
-        <ProjectItemWrap>
-            <ProjectTitle>{title}</ProjectTitle>
-            <ProjectContent>{content}</ProjectContent>
-            <ProjectSkills>{renderSkills}</ProjectSkills>
-        </ProjectItemWrap>
-    )
+    return <ProjectStyled.Wrap>{renderData}</ProjectStyled.Wrap>
 };
 
 export default Project;

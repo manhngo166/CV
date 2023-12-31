@@ -1,43 +1,39 @@
 import styled from "styled-components";
-import { FONT_MENLO, SECOND_COLOR } from "../../cssGlobal";
-import DEVICES from "../../constants/devices";
+import { DEVICES, CSS_VARIABLE } from "@/constants";
 
-export const Education = styled.div`
-
-`;
-
-export const EducationItem = styled.div`
-    &:not(:last-child) {
-        margin-bottom: 1.6rem;
-    }
-`;
-
-export const EducationHeader = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.8rem;
+const EducationStyled = {
+    Wrap: styled.div``,
+    Item: styled.div`
+        &:not(:last-child) {
+            margin-bottom: 1.6rem;
+        }
+    `,
+    Header: styled.div`
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.8rem;
+        
+        @media ${DEVICES.mobileL} {
+            flex-direction: column;
+        }
+    `,
+    Title: styled.div`
+        font-size: 1.6rem;
+        font-weight: bold;
     
-    @media ${DEVICES.mobileL} {
-        flex-direction: column;
-    }
-`;
+        @media ${DEVICES.mobileL} {
+            margin-bottom: 0.4rem;
+        }
+    `,
+    TimeRange: styled.div`
+        color: ${CSS_VARIABLE.secondColor};
+    `,
+    Content: styled.div`
+        font-family: ${CSS_VARIABLE.fontMenlo};
+        color: ${CSS_VARIABLE.secondColor};
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    `
+};
 
-export const EducationTitle = styled.div`
-    font-size: 1.6rem;
-    font-weight: bold;
-
-    @media ${DEVICES.mobileL} {
-        margin-bottom: 0.4rem;
-    }
-`;
-
-export const EducationTimeRange = styled.div`
-    color: ${SECOND_COLOR};
-`;
-
-export const EducationContent = styled.div`
-    font-family: ${FONT_MENLO};
-    color: ${SECOND_COLOR};
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-`;
+export default EducationStyled;

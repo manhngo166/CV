@@ -1,10 +1,10 @@
 import data from "./data";
-import { Skill as SkillWrap, SkillItem } from "./style";
+import SkillStyled from "./style";
 
 const Skill = () => {
-    const renderData = data.map(skill => (<SkillItem>{skill}</SkillItem>));
+    const renderData = data.map((skill, index) => (<SkillStyled.Item key={index}>{skill}</SkillStyled.Item>));
 
-    return (<SkillWrap>{renderData}</SkillWrap>)
+    return (<SkillStyled.Wrap>{renderData}</SkillStyled.Wrap>)
 };
 
 export default Skill;

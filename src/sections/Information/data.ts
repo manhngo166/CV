@@ -1,5 +1,5 @@
 const data = {
-    description: 'Full Stack Engineer focused on building products with extra attention to details',
+    description: 'Tôi là một người trẻ, nhiệt tình, cởi mở và có trách nhiệm',
     address: 'Đông Anh, Hà Nội, Việt Nam',
     image: 'src/assets/images/avatar2.jpg',
     contacts: [

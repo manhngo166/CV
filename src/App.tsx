@@ -7,12 +7,17 @@ import Education from './sections/Education';
 import Project from './sections/Project';
 import { MAIN_COLOR } from './cssGlobal';
 import Information from './sections/Information';
+import DEVICES from './constants/devices';
 
 const Wrap = styled.div`
-  padding: 6.4rem 0 ;
+  padding: 6.4rem 0;
   color: ${MAIN_COLOR};
   max-width: 67.2rem;
   margin: 0 auto;
+
+  @media ${DEVICES.mobileL} {
+    padding: 1.2rem;
+  }
 `;
 
 function App() {

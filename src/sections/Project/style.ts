@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { FONT_MENLO, SECOND_COLOR } from "../../cssGlobal";
+import { FONT_MENLO, SECOND_COLOR, THIRD_COLOR } from "../../cssGlobal";
+import DEVICES from "../../constants/devices";
 
 export const Project = styled.ul`
     display: flex;
@@ -8,14 +9,20 @@ export const Project = styled.ul`
     flex-grow: 0;
     flex-shrink: 0;
     margin-right: calc(-1 * 1.8rem);
+    @media ${DEVICES.mobileL} {
+        margin-right: 0;
+    }
 `;
 
 export const ProjectItem = styled.li`
-    border: 1px solid #F3F4F6;
+    border: 2px solid ${THIRD_COLOR};
     border-radius: 1.2rem;
     padding: 1.2rem;
     border-radius: 0.4rem;
     flex-basis: calc(50% - 1.8rem);
+    @media ${DEVICES.mobileL} {
+        flex-basis: calc(100%);
+    }
 `;
 
 export const ProjectTitle = styled.div`
@@ -39,7 +46,7 @@ export const ProjectSkill = styled.li`
     font-family: ${FONT_MENLO};
     border-radius: 0.4rem;
     font-size: 1rem;
-    background-color: #F3F4F6;
+    background-color: ${THIRD_COLOR};
     padding: 0.4rem 0.8rem;
     font-weight: bold;
 `;

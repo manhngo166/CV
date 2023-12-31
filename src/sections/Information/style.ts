@@ -1,7 +1,18 @@
 import styled from "styled-components";
-import { FONT_MENLO, MAIN_COLOR, SECOND_COLOR } from "../../cssGlobal";
+import { FONT_MENLO, MAIN_COLOR, SECOND_COLOR, THIRD_COLOR } from "../../cssGlobal";
+import DEVICES from "../../constants/devices";
 
-export const Information = styled.div``;
+export const Information = styled.div`
+    display: flex;
+    justify-content: space-between;
+    gap: 1.8rem;
+
+    @media ${DEVICES.mobileL} {
+        flex-direction: column-reverse;
+    }
+`;
+export const InformationLeft = styled.div``;
+export const InformationRight = styled.div``;
 export const InformationDescription = styled.div`
     font-family: ${FONT_MENLO};
     color: ${SECOND_COLOR};
@@ -37,14 +48,14 @@ export const InformationContactLink = styled.a`
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 0.4rem;
-    border: 1px solid #e5e7eb;
+    border: 2px solid ${THIRD_COLOR};
     svg {
         width: 1.6rem;
         height: 1.6rem;
         color: ${SECOND_COLOR}
     }
     &:hover {
-        background-color: #F3F4F6;
+        background-color: ${THIRD_COLOR};
         svg {
             color: ${MAIN_COLOR}
         }

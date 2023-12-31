@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FONT_MENLO, SECOND_COLOR } from "../../cssGlobal";
+import DEVICES from "../../constants/devices";
 
 export const Experience = styled.div`
 
@@ -15,11 +16,19 @@ export const ExperienceHeader = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.8rem;
+
+    @media ${DEVICES.mobileL} {
+        flex-direction: column;
+    }
 `;
 
 export const ExperienceTitle = styled.div`
     font-size: 1.6rem;
     font-weight: bold;
+
+    @media ${DEVICES.mobileL} {
+        margin-bottom: 0.4rem;
+    }
 `;
 
 export const ExperienceTimeRange = styled.div`

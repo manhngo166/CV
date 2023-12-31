@@ -7,7 +7,9 @@ import {
     InformationContactLink,
     InformationAddressText,
     InformationAddressIcon,
-    InformationAvatar
+    InformationAvatar,
+    InformationLeft,
+    InformationRight
 } from "./style";
 
 const Information = () => {
@@ -15,21 +17,19 @@ const Information = () => {
 
     return (
         <InformationWrap>
-            <div className="row">
-                <div className="col-md-9">
-                    <InformationDescription>{data.description}</InformationDescription>
+            <InformationLeft>
+                <InformationDescription>{data.description}</InformationDescription>
                     <InformationAddress>
                         <InformationAddressIcon>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-globe h-3 w-3"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
                         </InformationAddressIcon>
                         <InformationAddressText>{data.address}</InformationAddressText>
                     </InformationAddress>
-                    <InformationContacts>{renderContacts}</InformationContacts>
-                </div>
-                <div className="col-md-3">
-                    <InformationAvatar src={data.image} />
-                </div>
-            </div>
+                <InformationContacts>{renderContacts}</InformationContacts>
+            </InformationLeft>
+            <InformationRight>
+                <InformationAvatar src={data.image} />
+            </InformationRight>
         </InformationWrap>
     )
 };

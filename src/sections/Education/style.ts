@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FONT_MENLO, SECOND_COLOR } from "../../cssGlobal";
+import DEVICES from "../../constants/devices";
 
 export const Education = styled.div`
 
@@ -15,11 +16,19 @@ export const EducationHeader = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.8rem;
+    
+    @media ${DEVICES.mobileL} {
+        flex-direction: column;
+    }
 `;
 
 export const EducationTitle = styled.div`
     font-size: 1.6rem;
     font-weight: bold;
+
+    @media ${DEVICES.mobileL} {
+        margin-bottom: 0.4rem;
+    }
 `;
 
 export const EducationTimeRange = styled.div`

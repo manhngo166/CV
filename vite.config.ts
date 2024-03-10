@@ -12,5 +12,9 @@ export default defineConfig({
           sections: `${path.resolve(__dirname, "./src/sections/")}`,
           assets: `${path.resolve(__dirname, "./src/assets/")}`,
       }
-  }
+  },
+  build: {
+    outDir: 'build',
+    emptyOutDir: true,
+  },
 })

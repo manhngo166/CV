@@ -22,7 +22,7 @@ function App() {
   return (
     <div className='container'>
       <Wrap>
-      <Section title="Ngô Quang Mạnh">
+      <Section title="Ngô Quang Mạnh 123">
           <Information />
       </Section>
       <Section title="Thông tin">

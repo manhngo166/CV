@@ -5,8 +5,12 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
 
     steps:
@@ -27,6 +31,4 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.2.0
         with:
-          ssh-key: ${{ secrets.DEPLOY_KEY}}
-          BRANCH: gh-pages
           FOLDER: build

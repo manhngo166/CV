@@ -1,6 +1,7 @@
 {
   "name": "cv",
   "private": true,
+  "homepage": "https://manhngo166.github.io/cv",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

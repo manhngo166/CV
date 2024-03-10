@@ -276,4 +276,4 @@ Error generating stack: `+o.message+`
   @media ${Et.mobileL} {
     padding: 1.2rem;
   }
-`;function e0(){return N.jsx("div",{className:"container",children:N.jsxs(b1,{children:[N.jsx(nr,{title:"Ngô Quang Mạnh 123",children:N.jsx(q1,{})}),N.jsx(nr,{title:"Thông tin",children:N.jsx(V1,{})}),N.jsx(nr,{title:"Học vấn",children:N.jsx(Z1,{})}),N.jsx(nr,{title:"Kỹ năng",children:N.jsx(Y1,{})}),N.jsx(nr,{title:"Kinh nghiệm",children:N.jsx(Q1,{})})]})})}ni.createRoot(document.getElementById("root")).render(N.jsx($n.StrictMode,{children:N.jsx(e0,{})}));
+`;function e0(){return N.jsx("div",{className:"container",children:N.jsxs(b1,{children:[N.jsx(nr,{title:"Ngô Quang Mạnh",children:N.jsx(q1,{})}),N.jsx(nr,{title:"Thông tin",children:N.jsx(V1,{})}),N.jsx(nr,{title:"Học vấn",children:N.jsx(Z1,{})}),N.jsx(nr,{title:"Kỹ năng",children:N.jsx(Y1,{})}),N.jsx(nr,{title:"Kinh nghiệm",children:N.jsx(Q1,{})})]})})}ni.createRoot(document.getElementById("root")).render(N.jsx($n.StrictMode,{children:N.jsx(e0,{})}));

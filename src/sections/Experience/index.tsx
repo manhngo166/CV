@@ -13,26 +13,10 @@ interface ExperienceItemProps {
     timeRange: string;
     position: string;
     description: string;
-    projects: any[];
 }
-const ExperienceItem = (props: ExperienceItemProps) => {
-    const { title, timeRange, position, projects, description } = props;
-    
-    const renderProjects = projects.map((project: any, index: number) => {
-        const { title, content, skills} = project;
-    
-        const renderSkills = skills.map((skill: any, index: number) => (
-            <ExperienceStyled.ProjectSkill key={index}>{skill}</ExperienceStyled.ProjectSkill>
-        ));
 
-        return (
-            <ExperienceStyled.Project key={index}>
-                <ExperienceStyled.ProjectTitle>{title}</ExperienceStyled.ProjectTitle>
-                <ExperienceStyled.ProjectContent>{content}</ExperienceStyled.ProjectContent>
-                <ExperienceStyled.ProjectSkills>{renderSkills}</ExperienceStyled.ProjectSkills>
-            </ExperienceStyled.Project>
-        );
-    });
+const ExperienceItem = (props: ExperienceItemProps) => {
+    const { title, timeRange, position, description } = props;
 
     return (
         <ExperienceStyled.Item>
@@ -43,7 +27,7 @@ const ExperienceItem = (props: ExperienceItemProps) => {
             <ExperienceStyled.Position>{position}</ExperienceStyled.Position>
             <ExperienceStyled.Description>{description || '---'}</ExperienceStyled.Description>
 
-            <ExperienceStyled.Projects>{renderProjects}</ExperienceStyled.Projects>
+            {/* <ExperienceStyled.Projects>{renderProjects}</ExperienceStyled.Projects> */}
         </ExperienceStyled.Item>
     );
 }

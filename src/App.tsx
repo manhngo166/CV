@@ -6,6 +6,7 @@ import Skill from 'sections/Skill'
 import Education from 'sections/Education';
 import Information from 'sections/Information';
 import { DEVICES, CSS_VARIABLE } from '@/constants';
+import Project from './sections/Project';
 
 const Wrap = styled.div`
   padding: 6.4rem 0;
@@ -36,6 +37,9 @@ function App() {
       </Section>
       <Section title="Kinh nghiệm">
           <Experience />
+      </Section>
+      <Section title="Dự án">
+          <Project />
       </Section>
       </Wrap>
     </div>

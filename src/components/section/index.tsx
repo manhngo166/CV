@@ -1,8 +1,8 @@
 import { Section as SectionWrap, SectionHeader, SectionContent } from "./style";
 
 interface Props {
-    title: string;
-    children: any;
+    title?: string;
+    children: string | JSX.Element;
 }
 
 const Section = (props: Props) => {

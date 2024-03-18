@@ -1,4 +1,4 @@
-import image from 'assets/images/avatar2.jpg';
+import image from 'assets/images/avatar.jpg';
 
 const data = {
     position: 'Pre-Senior Frontend Developer',
